@@ -11,9 +11,8 @@ class CreateProject extends Component {
 
     onsubmit = (element) => {
     element.preventDefault();
-       console.log(this.state)
        let id = Math.random().toString()
-       this.props.addProject({id: id, title: this.state.title, content:this.state.content})
+       this.props.addProject({id: id, ...this.state})
     }
     render(){
         return(
