@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 const ProjectList = (props) => {
@@ -6,15 +7,15 @@ const ProjectList = (props) => {
     console.log(projects)
     let project = projects.map(x => {
         return (
-            
-            <div className="col s12 m5" key = {x.id}>
-                <div className="card-panel teal">
-                    <span className="white-text"><h4>{x.title}</h4></span>
-                    <br/>
-                    <span className="white-text">{x.content}</span>
+            <Link to = {'/project/'+ x.id} key = {x.id}>
+                <div className="col s12 m5" >
+                    <div className="card-panel teal">
+                        <span className="white-text"><h4>{x.title}</h4></span>
+                        <br/>
+                        <span className="white-text">{x.content}</span>
+                    </div>
                 </div>
-            </div>
-        
+            </Link>
         )
     })
 
