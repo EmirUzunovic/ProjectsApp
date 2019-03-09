@@ -11,8 +11,8 @@ class CreateProject extends Component {
 
     onsubmit = (element) => {
     element.preventDefault();
-       let id = Math.random().toString()
-       this.props.addProject({id: id, ...this.state})
+        this.props.addProject(this.state)
+        this.props.history.push('/')
     }
     render(){
         return(
@@ -39,6 +39,7 @@ class CreateProject extends Component {
     }
 }
 const mapDispatchToProps = (dispatch) => {
+    console.log(dispatch);
     return {
         addProject: (project) => dispatch(addProject(project))
     }
