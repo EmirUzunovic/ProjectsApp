@@ -16,7 +16,7 @@ import * as serviceWorker from './serviceWorker';
 const store = createStore(rootReducer, compose(
     applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore })),
     reduxFirestore(firebaseConfi),
-    reactReduxFirebase(firebaseConfi, {attachAuthIsReady: true})
+    reactReduxFirebase(firebaseConfi, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true})
 )
 );
 
