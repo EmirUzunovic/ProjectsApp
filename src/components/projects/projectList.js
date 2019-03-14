@@ -43,5 +43,5 @@ const mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps),
-    firestoreConnect([{ collection: 'projects' }])
+    firestoreConnect([{ collection: 'projects' }, {collection: 'notifications', limit: 3}])
   )(ProjectList)
