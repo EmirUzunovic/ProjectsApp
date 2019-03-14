@@ -9,7 +9,6 @@ import moment from 'moment'
 const ProjectList = (props) => {
     const {projects, auth} = props
     if(!auth.uid) return <Redirect to ='/login'/>
-    console.log(projects)
     return(
         <div className="row">
             {projects && projects.map(x => {
@@ -43,5 +42,5 @@ const mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps),
-    firestoreConnect([{ collection: 'projects' }, {collection: 'notifications', limit: 3}])
+    firestoreConnect([{ collection: 'projects', orderBy: ['createdAt', 'desc'] }, {collection: 'notifications', limit: 3, orderBy: ['time', 'desc']}])
   )(ProjectList)
