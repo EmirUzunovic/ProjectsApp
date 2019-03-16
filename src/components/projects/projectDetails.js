@@ -13,7 +13,7 @@ const ProjectDetails = (props) => {
         return(
     <div>
         <div className="container" >
-            <div className="card amber lighten-4 black-text z-depth-1 col s12 m5 ">
+            <div className="card amber lighten-2 black-text z-depth-1 col s12 m5 ">
                 <div className="card-content">
                 <span className="card-title">{project.title}</span>          
                 <p>{project.content}</p>         
