@@ -20,25 +20,25 @@ class LogIn extends Component {
         const {authError, auth} = this.props
         if(auth.uid) return <Redirect to ='/'/>
         return(
-            <div className="container">  
-                <form>
+            
+                <form className="container">
                     <h4>Log In</h4>
                     <div className="input-field">
                         <input type="email" id="email" className="validate" onChange = {this.handlechange}/>
-                        <label className="active" htmlFor="email">Email</label>
+                        <label htmlFor="email">Email</label>
                     </div>
                     <div className="input-field">
                         <input type="password" id="password" onChange = {this.handlechange}/>
-                        <label className="active" htmlFor="name">Password</label>
+                        <label htmlFor="name">Password</label>
                     </div>
                     <div className="input-field">
-                        <button className="btn blue-grey lighten-2" onClick = {this.onsubmit}>LogIn</button>
+                        <button className="btn light blue lighten-2" onClick = {this.onsubmit}>LogIn</button>
                     </div>
                     <div className ="center red-text">
                         {authError ? <p> { authError } </p>: null}
                     </div>
                 </form>         
-            </div>
+     
         )
     }
 }

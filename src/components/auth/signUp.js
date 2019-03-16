@@ -18,35 +18,33 @@ class SignUp extends Component {
         const { auth, authError } = this.props
         if(auth.uid) return <Redirect to = '/'/>
         return(
-            
-            <div className="container">
                 
-            <form>
+            <form className="container">
                 <h4>Sign up</h4>
                 <div className="input-field">
                     <input type="text" id="firstName" className="validate" onChange = {this.handlechange}/>
-                    <label className="active" htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName">First Name</label>
                 </div>
                 <div className="input-field">
                     <input type="text" id="lastName" className="validate" onChange = {this.handlechange}/>
-                    <label className="active" htmlFor="lastName">Last Name</label>
+                    <label htmlFor="lastName">Last Name</label>
                 </div>
                 <div className="input-field">
                     <input type="email" id="email" className="validate" onChange = {this.handlechange}/>
-                    <label className="active" htmlFor="email">Email</label>
+                    <label htmlFor="email">Email</label>
                 </div>
                 <div className="input-field">
                     <input type="password" id="password" onChange = {this.handlechange}/>
-                    <label className="active" htmlFor="name">Password</label>
+                    <label htmlFor="name">Password</label>
                 </div>
                 <div className="input-field">
-                    <button className="btn blue-grey lighten-2" onClick = {this.onsubmit}>Sign up</button>
+                    <button className="btn light blue lighten-2" onClick = {this.onsubmit}>Sign up</button>
                 </div>
                 <div className="center red-text">
                     { authError? <p>{authError}</p> : null}
                 </div>
             </form>         
-            </div>
+        
         )
     }
 }

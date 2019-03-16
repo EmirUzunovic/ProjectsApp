@@ -9,7 +9,12 @@ const SigneInLink = (props) => {
         <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li><NavLink to ="/newproject">New Project</NavLink></li>
             <li><a onClick = {props.signOut}>Log Out</a></li>
-            <li><NavLink to ="/" className ="btn-floating btn-large waves-effect waves-light teal lighten-3">{props.profile.initials}</NavLink></li>
+            <li><NavLink to ="/" className ="btn-floating right center-align light blue lighten-2 waves-effect waves-dark z-depth-0">{props.profile.initials}</NavLink></li>
+        </ul>
+        <ul id="mobile-links" className="sidenav">
+            <li><NavLink to ="/newproject">New Project</NavLink></li>
+            <li><a onClick = {props.signOut}>Log Out</a></li>
+            <li><NavLink to ="/" className ="btn-floating right center-align light blue lighten-2 waves-effect waves-dark z-depth-0">{props.profile.initials}</NavLink></li>
         </ul>
     </div>
     )

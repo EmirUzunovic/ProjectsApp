@@ -9,12 +9,13 @@ const Navbar = (props) => {
 
     const links = auth.uid? <SigneInLink profile = {profile}/> : <SigneOutLink/>
     return(
-      <nav>
-      <div className="nav-wrapper blue-grey lighten-2">
-        <Link to ="/" className="brand-logo left center-on-med-and-down ">Projects</Link>
-       {links}
-      </div>
-    </nav>
+            <nav className="nav-wrapper amber">
+              <div className="container"> 
+              <Link to ="/" className="brand-logo">Projects</Link>
+              <Link to="/" className="sidenav-trigger left" data-target="{mobile-links}"><i className = "material-icons">menu</i></Link>
+              {links}
+              </div>
+            </nav>
     )
     }
 

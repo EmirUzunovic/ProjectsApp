@@ -15,14 +15,13 @@ const ProjectList = (props) => {
                 return (
                 <Link to = {'/project/' + x.id} key = {x.id}>
                     <div className="project-list section" >
-                        <div className="card-panel teal">
-                            <span className="white-text"><h4>{x.title}</h4></span>
-                            <br/>
-                            <span className="white-text">{x.content}</span>
-                            <br/>
-                            <span className="red-text">Posted by: {x.authorFirstName} {x.authorLastName}</span>
-                            <br/>
-                            <span className="red-text">Time: {moment(x.createdAt.toDate()).calendar()}</span>
+                        <div className="card amber lighten-2 black-text">
+                            <div className="card-content">
+                            <span className="card-title center-align"><i className="material-icons left">assignment</i> {x.title}</span>
+                            <p className="truncate">{x.content}</p>
+                            <p>Posted by: {x.authorFirstName} {x.authorLastName}</p>
+                            <p>Time: {moment(x.createdAt.toDate()).calendar()}</p>
+                            </div>
                         </div>
                     </div>
                 </Link>
@@ -42,5 +41,7 @@ const mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps),
-    firestoreConnect([{ collection: 'projects', orderBy: ['createdAt', 'desc'] }, {collection: 'notifications', limit: 3, orderBy: ['time', 'desc']}])
+    firestoreConnect([{ collection: 'projects', orderBy: ['createdAt', 'desc'] }, 
+                      {collection: 'notifications', limit: 3, orderBy: ['time', 'desc']},
+                    ])
   )(ProjectList)

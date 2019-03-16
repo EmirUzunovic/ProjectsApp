@@ -12,15 +12,14 @@ const ProjectDetails = (props) => {
         console.log(project)
         return(
     <div>
-        <div className="col s12 m5" >
-            <div className="card-panel teal">
-                <span className="white-text"><h4>{project.title}</h4></span>
-                <br/>
-                <span className="white-text">{project.content}</span>
-                <br/>
-                <span className="white-text">Posted by: {project.authorFirstName} {project.authorLastName}</span>
-                <br/>
-                <span className="white-text">Posted by: {moment(project.createdAt.toDate()).calendar()} </span>
+        <div className="container" >
+            <div className="card amber lighten-4 black-text z-depth-1 col s12 m5 ">
+                <div className="card-content">
+                <span className="card-title">{project.title}</span>          
+                <p>{project.content}</p>         
+                <p className="light blue-text text-lighten-2">Posted by: {project.authorFirstName} {project.authorLastName}</p>
+                <p>Time: {moment(project.createdAt.toDate()).calendar()}</p>
+                </div>
             </div>
         </div>
     </div>

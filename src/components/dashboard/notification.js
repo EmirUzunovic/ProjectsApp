@@ -6,16 +6,16 @@ const Notifications = (props) => {
     const {notifications} = props
    
     return(
-        <div className="section">
-            <div className="card z-depth-0" >
+        <div className="notification section">
+            <div className="card" >
                 <div className = "card-content">
                     <span className = "card-title">Notifications</span>
                     <ul className = "notifications">
                         {notifications && notifications.map(x => {
                             return(
                                     <li key={x.id}>
-                                        <span className="pink-text">{x.user}</span>
-                                        <span className="pink-text">{x.content}</span>
+                                        <p className="light blue-text text-lighten-2">{x.user}</p>
+                                        <p className="light blue-text text-lighten-2">{x.content}</p>
                                         <div className="grey-text">{moment(x.time.toDate()).fromNow()}</div>
                                     </li>
                                 )

@@ -19,25 +19,22 @@ class CreateProject extends Component {
         const {auth} = this.props
         if(!auth.uid) return <Redirect to = '/'/>
         return(
-
-            <div className="container">
-                
-            <form>
+          
+            <form className="container">
                 <h4>Create new project</h4>
                 <div className="input-field">
                     <input type="text" id="title" className="validate" onChange = {this.handlechange}/>
-                    <label className="active" htmlFor="firstName">Project Title</label>
+                    <label  htmlFor="firstName">Project Title</label>
                 </div>
                 <div className="input-field">
                     <textarea type="text" id="content" className="materialize-textarea" onChange = {this.handlechange}></textarea>
-                    <label className="active" htmlFor="lastName">Project Content</label>
+                    <label htmlFor="lastName">Project Content</label>
                 </div>
-                
                 <div className="input-field">
-                    <button className="btn blue-grey lighten-2" onClick = {this.onsubmit}>Create</button>
+                    <button className="btn light blue lighten-2" onClick = {this.onsubmit}>Create</button>
                 </div>
             </form>         
-            </div>
+          
         )
     }
 }
