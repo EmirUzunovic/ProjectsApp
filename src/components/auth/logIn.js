@@ -20,7 +20,17 @@ class LogIn extends Component {
         const {authError, auth} = this.props
         if(auth.uid) return <Redirect to ='/'/>
         return(
-            
+            <div className="container">
+
+            <div className="row">
+            <div class="card col s12 m4 light blue lighten-2 white-text z-depth-1 ">
+                <div class="card-content">
+                    <span class="card-title">Try out project app as  a test user.</span>
+                    <p>Email: user@wanderer.com</p>
+                    <p>Password: test1234 </p>
+                </div> 
+            </div>
+          </div>
                 <form className="container">
                     <h4>Log In</h4>
                     <div className="input-field">
@@ -37,7 +47,10 @@ class LogIn extends Component {
                     <div className ="center red-text">
                         {authError ? <p> { authError } </p>: null}
                     </div>
-                </form>         
+                </form>    
+
+                
+                </div>     
      
         )
     }
