@@ -23,9 +23,9 @@ class LogIn extends Component {
             <div className="container">
 
             <div className="row">
-            <div class="card col s12 m4 light blue lighten-2 white-text z-depth-1 ">
-                <div class="card-content">
-                    <span class="card-title">Try out project app as  a test user.</span>
+            <div className="card col s12 m4 light blue lighten-2 white-text z-depth-1 ">
+                <div className="card-content">
+                    <span className="card-title">Try out project app as  a test user.</span>
                     <p>Email: user@wanderer.com</p>
                     <p>Password: test1234 </p>
                 </div> 
