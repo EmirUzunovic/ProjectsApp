@@ -9,8 +9,8 @@
 
 } */
 
-nav ul a.btn-floating {
-  margin-top: 15%;
+nav a.btn-floating {
+  margin-top: 0.5em;
 }
 
 h4 {
@@ -30,3 +30,9 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label,
        border-color:#039be5;
 
    }
+
+   @media only screen and (min-width: 590px) {
+    nav a.btn-floating {
+    margin-top: 0.9em;
+  }} 
+  
