@@ -4,19 +4,19 @@ import { connect } from 'react-redux'
 import { signOut } from '../../actions/authActions'
 
 const SigneInLink = (props) => {
+    //returning two sets of ul, one for s size screen, and other for m and l size screens
     return(
-
-    <div>
-        <ul className="right hide-on-med-and-down">
-            <li><NavLink to ="/newproject">New Project</NavLink></li>
-            <li><a onClick = {props.signOut}>Log Out</a></li>   
-        </ul>
-        <ul id="mobile-links" className="sidenav">
-            <li><NavLink to ="/newproject">New Project</NavLink></li>
-            <li><a onClick = {props.signOut}>Log Out</a></li>
-        </ul>
-    </div>
-    )
+        <div>
+            <ul className="right hide-on-med-and-down">
+                <li><NavLink to ="/newproject">New Project</NavLink></li>
+                <li><a onClick = {props.signOut}>Log Out</a></li>   
+            </ul>
+            <ul id="mobile-links" className="sidenav">
+                <li><NavLink to ="/newproject">New Project</NavLink></li>
+                <li><a onClick = {props.signOut}>Log Out</a></li>
+            </ul>
+        </div>
+        )
     }
 
     const mapDispatchToProps = (dispatch)=> {
@@ -24,4 +24,5 @@ const SigneInLink = (props) => {
             signOut : () => dispatch(signOut())
         }
     }
+
     export default connect(null, mapDispatchToProps)(SigneInLink)

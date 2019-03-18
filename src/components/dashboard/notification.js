@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 const Notifications = (props) => {
     const {notifications} = props
-   
+   //maping notifications collection from firebase
     return(
         <div className="notification section">
             <div className="card" >

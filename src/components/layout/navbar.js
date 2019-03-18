@@ -7,10 +7,8 @@ import { connect } from 'react-redux'
 import M from 'materialize-css'
 import 'materialize-css/dist/css/materialize.min.css'
 
-
-
 class Navbar extends Component {
-  componentDidMount() {
+    componentDidMount() {
     //Auto initialize all the things!
     M.AutoInit();
     }
@@ -19,7 +17,9 @@ class Navbar extends Component {
     }
     
     render() {
+      //destructuring props
       const { auth, profile } = this.props
+      //rendering links depending of auth status
       const links = auth.uid? <SigneInLink profile = {profile}/> : <SigneOutLink/>
       return(
             <nav className="nav-wrapper amber">
@@ -31,11 +31,10 @@ class Navbar extends Component {
               
               </div>
             </nav>
-    )
+            )
+          } 
     }
-    
-    }
-
+    //maping data from firebase.auth i firebase.profile as props
     const mapStateToProps = (state) => {
       return {
         auth: state.firebase.auth,
