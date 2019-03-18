@@ -19,23 +19,23 @@ class SignUp extends Component {
         if(auth.uid) return <Redirect to = '/'/>
         return(
                 
-            <form className="container" Autocomplete="on">
+            <form className="container" autoComplete="on">
                 <h4>Sign up</h4>
                 <div className="input-field">
                     <input type="text" id="firstName" className="validate" onChange = {this.handlechange}/>
-                    <label class="active" htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName">First Name</label>
                 </div>
                 <div className="input-field">
                     <input type="text" id="lastName" className="validate" onChange = {this.handlechange}/>
-                    <label class="active" htmlFor="lastName">Last Name</label>
+                    <label htmlFor="lastName">Last Name</label>
                 </div>
                 <div className="input-field">
                     <input type="email" id="email" className="validate" onChange = {this.handlechange}/>
-                    <label class="active" htmlFor="email">Email</label>
+                    <label htmlFor="email">Email</label>
                 </div>
                 <div className="input-field">
                     <input type="password" id="password" onChange = {this.handlechange}/>
-                    <label class="active" htmlFor="name">Password</label>
+                    <label htmlFor="name">Password</label>
                 </div>
                 <div className="input-field">
                     <button className="btn light blue lighten-2" onClick = {this.onsubmit}>Sign up</button>

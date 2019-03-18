@@ -17,7 +17,7 @@ const ProjectList = (props) => {
                     <div className="project-list section" >
                         <div className="card amber lighten-2 black-text">
                             <div className="card-content">
-                            <span className="card-title center-align"><i className="material-icons left">assignment</i> {x.title}</span>
+                            <span className="card-title center-align"><i className="material-icons left">assignment</i><h4> {x.title}</h4></span>
                             <p className="truncate">{x.content}</p>
                             <p>Posted by: {x.authorFirstName} {x.authorLastName}</p>
                             <p>Time: {moment(x.createdAt.toDate()).calendar()}</p>
