@@ -23,7 +23,7 @@ class LogIn extends Component {
             <div className="container">
 
             <div className="row">
-            <div className="card col s12 m4 light blue lighten-2 white-text z-depth-1 ">
+            <div className="card col s12 m8 light blue lighten-2 white-text z-depth-1 ">
                 <div className="card-content">
                     <span className="card-title">Try out project app as  a test user.</span>
                     <p>Email: user@wanderer.com</p>
@@ -31,15 +31,15 @@ class LogIn extends Component {
                 </div> 
             </div>
           </div>
-                <form className="container" Autocomplete="on">
+                <form className="container" autoComplete="on">
                     <h4>Log In</h4>
                     <div className="input-field">
                         <input type="email" id="email" className="validate" onChange = {this.handlechange}/>
-                        <label class="active" htmlFor="email">Email</label>
+                        <label htmlFor="email">Email</label>
                     </div>
                     <div className="input-field">
                         <input type="password" id="password" onChange = {this.handlechange}/>
-                        <label class="active" htmlFor="name">Password</label>
+                        <label htmlFor="name">Password</label>
                     </div>
                     <div className="input-field">
                         <button className="btn light blue lighten-2" onClick = {this.onsubmit}>LogIn</button>

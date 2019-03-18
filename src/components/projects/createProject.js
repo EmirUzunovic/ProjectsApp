@@ -20,7 +20,7 @@ class CreateProject extends Component {
         if(!auth.uid) return <Redirect to = '/'/>
         return(
           
-            <form className="container">
+            <form className="container" autoComplete="on">
                 <h4>Create new project</h4>
                 <div className="input-field">
                     <input type="text" id="title" className="validate" onChange = {this.handlechange}/>

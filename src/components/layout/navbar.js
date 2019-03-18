@@ -10,15 +10,14 @@ import 'materialize-css/dist/css/materialize.min.css'
 
 
 class Navbar extends Component {
-    componentDidMount() {
-      const options = { inDuration: 250, outDuration: 200, draggable: true};
-      M.Sidenav.init(this.Sidenav)
+  componentDidMount() {
+    //Auto initialize all the things!
+    M.AutoInit();
     }
- 
+    componentDidUpdate(){
+      M.AutoInit();
+    }
     
-
-    
-
     render() {
       const { auth, profile } = this.props
       const links = auth.uid? <SigneInLink profile = {profile}/> : <SigneOutLink/>
