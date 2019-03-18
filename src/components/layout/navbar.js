@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import SigneInLink from './signedInLinks'
 import SigneOutLink from './signedOutLinks'
 import { connect } from 'react-redux'
@@ -17,7 +17,7 @@ const Navbar = (props) => {
             <nav className="nav-wrapper amber">
               <div className="container"> 
               <Link to ="/" className="brand-logo">Projects</Link>
-              <Link to="/" className="sidenav-trigger left" data-target="mobile-links"><i className = "material-icons">menu</i></Link>
+              <a href="#!" className="sidenav-trigger left" data-target="mobile-links"><i className = "material-icons">menu</i></a>
               <NavLink to ="/" className ="btn-floating right center-align light blue lighten-2 waves-effect waves-dark z-depth-0">{props.profile.initials}</NavLink>
               {links}
               

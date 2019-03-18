@@ -14,8 +14,17 @@ class App extends Component {
     // Auto initialize all the things!
     M.AutoInit();
 }
+componentWillMount() {
+  // Auto initialize all the things!
+  M.AutoInit();
+}
+componentDidUpdate() {
+  // Auto initialize all the things!
+  M.AutoInit();
+}
+
   render() {
-  
+ 
     return (
       <BrowserRouter>
       <div className="App">
