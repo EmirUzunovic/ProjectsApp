@@ -31,15 +31,15 @@ class LogIn extends Component {
                 </div> 
             </div>
           </div>
-                <form className="container">
+                <form className="container" Autocomplete="on">
                     <h4>Log In</h4>
                     <div className="input-field">
                         <input type="email" id="email" className="validate" onChange = {this.handlechange}/>
-                        <label htmlFor="email">Email</label>
+                        <label class="active" htmlFor="email">Email</label>
                     </div>
                     <div className="input-field">
                         <input type="password" id="password" onChange = {this.handlechange}/>
-                        <label htmlFor="name">Password</label>
+                        <label class="active" htmlFor="name">Password</label>
                     </div>
                     <div className="input-field">
                         <button className="btn light blue lighten-2" onClick = {this.onsubmit}>LogIn</button>

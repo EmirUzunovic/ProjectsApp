@@ -7,9 +7,15 @@ import LogIn from './components/auth/logIn'
 import CreateProject from './components/projects/createProject'
 import ProjectDetails from './components/projects/projectDetails'
 import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css'
 
 class App extends Component {
+  componentDidMount() {
+    // Auto initialize all the things!
+    M.AutoInit();
+}
   render() {
+  
     return (
       <BrowserRouter>
       <div className="App">
